@@ -41,7 +41,7 @@ export const jwtAuthPost: RequestHandler[] = [
 			}
 			const jwtToken = generateAuthToken( jwt );
 			res.status( HttpStatus.OK ).json( {
-				code: HttpStatus.OK, data: { token: jwtToken }, message: 'success'
+				code: HttpStatus.OK, token: jwtToken, message: 'success'
 			} );
 		} catch ( err ) {
 			console.error( err );
