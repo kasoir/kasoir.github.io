@@ -23,6 +23,7 @@ import { ReportComponent } from './administration/report/report.component';
 import { MovieUploadComponent } from './administration/movie-upload/movie-upload.component';
 import { TableModule } from 'primeng/table';
 import { DropdownModule } from 'primeng/dropdown';
+import { CategoryModule } from './category/category.module';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { DropdownModule } from 'primeng/dropdown';
     DirectorModule,
     TableModule,
     DropdownModule,
+    CategoryModule,
   ],
   providers: [BsModalRef],
   bootstrap: [AppComponent]

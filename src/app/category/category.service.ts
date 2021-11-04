@@ -13,7 +13,6 @@ export class CategoryService {
 
   constructor(
     private http: HttpClient,
-    private authService: AuthService,
   ) { }
 
   getBy = async (key?: string, value?: string): Promise<Category[]> => {
@@ -29,6 +28,20 @@ export class CategoryService {
   public createCategory = async (category: Category) => {
     try {
       const url = `${this.Category_API}/createCategory`;
+      const result = await this.http.post<any>(url, category, {
+        headers: new HttpHeaders()
+          .set('Authorization',
+            JSON.parse((localStorage.getItem('currentUserData') || '{"token":""}')).token || '')
+      }).toPromise();
+      return <Category[]>result.data;
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
+  }
+  public updateCategory = async (category: Category) => {
+    try {
+      const url = `${this.Category_API}/updateCategory`;
       const result = await this.http.post<any>(url, category, {
         headers: new HttpHeaders()
           .set('Authorization',

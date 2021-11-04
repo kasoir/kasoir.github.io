@@ -1,4 +1,3 @@
-// TODO ALI TO REVIEW
 import { PoolClient } from 'pg';
 import * as pg from './lib.pool'
 import { objectify } from '../../utils/objectify';

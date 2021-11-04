@@ -7,6 +7,7 @@ import { SocialLoginModule } from 'angularx-social-login/sociallogin.module';
 import { MessageService, SharedModule } from 'primeng/api';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { ToastModule } from 'primeng/toast';
+import { NgxMaskModule } from 'ngx-mask';
 
 const routes: Routes = [
 	{ path: '', component: SignInComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
 		RouterModule.forChild( routes ),
     SharedModule,
     ToastModule,
+    NgxMaskModule,
   ],
   providers: [
     MessageService,

@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from 'models/movie.model';
 import { NgForm } from '@angular/forms';
-import { BsModalRef } from 'ngx-bootstrap/modal';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { MoviesService } from '../movies.service';
 import { MessageService } from 'primeng/api';
-import { saveAs } from 'file-saver';
+import { MovieDownloadComponent } from '../movie-download/movie-download.component';
 
 @Component({
   selector: 'app-movie-details',
@@ -21,7 +21,8 @@ export class MovieDetailsComponent implements OnInit {
   constructor(
     public bsModalRef: BsModalRef,
     private movieService: MoviesService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private modalService: BsModalService,
   ) { }
 
   ngOnInit(): void {
@@ -47,12 +48,10 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   downloadMovie = async (form: NgForm) => {
-    this.movieService.getMovie(this.data.id).then(async (res) => {
-      const blob = res;
-      console.log(blob);
-      const file = new File([blob], this.data.name + '.mp4');
-      console.log(file);
-      saveAs(file);
-    });
+    const initialState = {
+			movie: this.data
+		};
+		this.modalService.show( MovieDownloadComponent, { class: 'modal-xl', backdrop: 'static', keyboard: true, initialState } );
+    this.bsModalRef.hide();
   }
 }

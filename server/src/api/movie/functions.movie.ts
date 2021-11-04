@@ -83,17 +83,14 @@ export const postMovie: RequestHandler[] = [
 	}),
 ];
 export const PostMovieUpload: RequestHandler[] = [
-	apiResponder(
 		async (req: Request, res: Response, next: NextFunction) => {
-			console.log(req.files)
+			console.log(req.files);
 			if ( !req.files ) {
 				res.status( StatusCodes.BAD_REQUEST ).json( { code: StatusCodes.BAD_REQUEST, data: {}, message: '', error: 'no file uploaded' } as ApiResponse<{}> );
 			}
-			console.log(req.body)
 			const uploadedFiles: string[] = [];
 			for (const fieldName in req.files) {
 				const movie = req.files[fieldName] as UploadedFile;
-				console.log(movie);
 				if (!fs.existsSync(`../../../ movies /`)) fs.mkdirSync('../../../movies/');
 				const docPath = `../../../movies/${movie.name}`;
 				console.log(docPath);
@@ -102,7 +99,7 @@ export const PostMovieUpload: RequestHandler[] = [
 			}
 
 			return uploadedFiles;
-		}),
+		}
 ]
 const getBy = async (key?: string, value?: string): Promise<Movie[]> => {
 	let movies: Movie[];

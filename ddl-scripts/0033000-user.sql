@@ -24,6 +24,11 @@ EXECUTE public.ensureBooleanFieldinTable('user', 'isVerified');
 ALTER TABLE public."user"  ALTER COLUMN "isVerified" SET DEFAULT false;
 
 EXECUTE public.ensureTextFieldinTable('user', 'status');
-ALTER TABLE public."user"  ALTER COLUMN "status" SET DEFAULT 'pending';
+ALTER TABLE public."user"  ALTER COLUMN "status" SET DEFAULT 'single';
+
+EXECUTE public.ensureTextFieldinTable('user', 'sex');
+ALTER TABLE public."user"  ALTER COLUMN "sex" SET DEFAULT 'male';
+
+EXECUTE public.ensureTextFieldinTable('user', 'birth');
 
 END $$

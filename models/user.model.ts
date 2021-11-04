@@ -7,7 +7,9 @@ export interface User {
     password: string,
     isAdmin: boolean,
     isVerified?: boolean,
-    status?: string;
+    status?: string,
+    sex?:string,
+    birth?: string,
 }
 
 const defaultUser: Required<User> = {
@@ -18,6 +20,8 @@ const defaultUser: Required<User> = {
     status: '',
     isAdmin: false,
     email: '',
+    sex:'',
+    birth: '',
 };
 
 export const getDefaultUser = () => {

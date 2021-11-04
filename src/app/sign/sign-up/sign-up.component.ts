@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { getDefaultUser, User } from 'models/user.model';
 import { MessageService } from 'primeng/api';
 import { UserService } from '../user.service';
@@ -19,6 +20,7 @@ export class SignUpComponent implements OnInit {
   constructor(
     private userService: UserService,
     private messageService: MessageService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -55,6 +57,7 @@ export class SignUpComponent implements OnInit {
     this.isLoading = 1;
     try {
       const result = await this.userService.createUser(user);
+      this.router.navigateByUrl( '/signIn' );
     } catch (error) {
       this.messageService.add({ summary: 'Error', sticky: false, life: 2000, detail: error.error.error || 'Sign Up Faild..' });
     }

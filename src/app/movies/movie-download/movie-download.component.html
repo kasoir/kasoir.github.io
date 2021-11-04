@@ -1,8 +1,8 @@
-<form #form="ngForm" (ngSubmit)="form.valid && downloadMovie(form)" *ngIf="done; else loading">
+<form #form="ngForm" (ngSubmit)="form.valid && downloadMovie(form)">
     <div class="modal-header">
         <div class="container-fluid">
             <div class="row">
-                <h4 class="modal-title pull-left">Movie {{data.name}}</h4>
+                <h4 class="modal-title pull-left">Movie {{movie.name}}</h4>
             </div>
         </div>
     </div>
@@ -14,11 +14,11 @@
                         <div class="input-group input-group-sm row">
                             <div class="input-group-prepend col-4">
                                 <div class="input-group-text">
-                                    Movie Name
+                                    Name
                                 </div>
                             </div>
                             <input class="form-control col-9 border-0" placeholder="Name" name="name"
-                                [(ngModel)]="data.name" [readonly]="!isAdmin">
+                                [(ngModel)]="card.name">
                         </div>
                     </div>
                 </div>
@@ -27,11 +27,11 @@
                         <div class="input-group input-group-sm row">
                             <div class="input-group-prepend col-4">
                                 <div class="input-group-text">
-                                    Category
+                                    email
                                 </div>
                             </div>
-                            <input class="form-control col-9 border-0" placeholder="Category" name="category"
-                                [(ngModel)]="data.category" [readonly]="!isAdmin">
+                            <input type="email" class="form-control col-9 border-0" placeholder="Email" name="email"
+                                [(ngModel)]="card.email">
                         </div>
                     </div>
                 </div>
@@ -40,73 +40,52 @@
                         <div class="input-group input-group-sm row">
                             <div class="input-group-prepend col-4">
                                 <div class="input-group-text">
-                                    Year
+                                    Card Number
                                 </div>
                             </div>
-                            <input class="form-control col-9 border-0" placeholder="Year" name="year"
-                                [(ngModel)]="data.year" [readonly]="!isAdmin">
+                            <input class="form-control col-9 border-0" placeholder="Number" name="number"
+                                [(ngModel)]="card.number" (blur)="validateNumber()" mask="0000-0000-0000-0000">
                         </div>
                     </div>
+                </div>
+                <div *ngIf="wrongNumber" class="alert alert-danger">
+                    Please Enter Valid Card Number
                 </div>
                 <div class="col-md-11">
                     <div class="form-group">
                         <div class="input-group input-group-sm row">
                             <div class="input-group-prepend col-4">
                                 <div class="input-group-text">
-                                    Director
+                                    Validity
                                 </div>
                             </div>
-                            <input class="form-control col-9 border-0" placeholder="Director" name="director"
-                                [(ngModel)]="data.director" [readonly]="!isAdmin">
+                            <input class="form-control col-9 border-0" placeholder="Validity" name="validity"
+                                [(ngModel)]="card.validity" (blur)="validateDate()" mask="00/00">
                         </div>
                     </div>
+                </div>
+                <div *ngIf="wrongDate" class="alert alert-danger">
+                    Please Enter Valid end Date
                 </div>
                 <div class="col-md-11">
                     <div class="form-group">
                         <div class="input-group input-group-sm row">
                             <div class="input-group-prepend col-4">
                                 <div class="input-group-text">
-                                    Price
+                                    Security Code
                                 </div>
                             </div>
-                            <input class="form-control col-9 border-0" placeholder="Price" name="price"
-                                [(ngModel)]="data.price" [readonly]="!isAdmin">
+                            <input class="form-control col-9 border-0" placeholder="Code" name="code"
+                                [(ngModel)]="card.code" maxlength="3">
                         </div>
                     </div>
-                </div>
-                <div class="col-md-11">
-                    <div class="form-group">
-                        <div class="input-group input-group-sm row">
-                            <div class="input-group-prepend col-4">
-                                <div class="input-group-text">
-                                    Description
-                                </div>
-                            </div>
-                            <textarea class="form-control col-9 border-0" placeholder="Description" name="description"
-                                [(ngModel)]="data.description" [readonly]="!isAdmin">
-                            </textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="col-sm-12">
-                    <img [src]="data.coverImage" alt="Cover Image">
-                </div>
-                <div class="col-sm-12">
-                    <ngb-rating [max]="5" [(rate)]="data.rate" [starTemplate]="t" [readonly]="!isAdmin && !canRate">
-                    </ngb-rating>
-                    <!-- <button pButton (click)="submitRating()"></button> -->
-                    <button class="btn btn-sm btn-primary button-position" pButton pRipple type="button"
-                        (click)="submitRating()" [disabled]="!isAdmin && !canRate">Rate</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="modal-footer">
         <button type="button" (click)="bsModalRef.hide()" class="btn btn-sm btn-light ml-auto">Cancel</button>
-        <button type="submit" class="btn btn-sm btn-primary m_l_10" *ngIf="!isAdmin">Download</button>
-        <button (click) = "update()" class="btn btn-sm btn-primary m_l_10" *ngIf="isAdmin">Update</button>
+        <button type="submit" class="btn btn-sm btn-primary m_l_10">Download</button>
     </div>
 </form>
 <ng-template #loading>

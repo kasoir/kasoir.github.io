@@ -22,7 +22,7 @@
             </ng-template>
             <ng-template class="row" pTemplate="body" let-category let-i="rowIndex">
                 <tr class="row col-12 pl-0 pr-0 ml-0 mr-0">
-                    <td class="col-4 pt-0 pb-0 text-center">{{i + 1}}</td>
+                    <td class="col-4 pt-0 pb-0 text-center">{{category.id}}</td>
                     <td class="col-4 pt-0 pb-0">{{category.description}}</td>
                     <td class="col-4 pt-0 pb-0 text-center">
                         <a (click)="categoryDetalis(category)"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i></a>

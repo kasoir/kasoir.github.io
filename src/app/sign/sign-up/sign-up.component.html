@@ -28,6 +28,24 @@
                             <div class="row mt-2">
                                 <div class="col-12">
                                     <div class="input-group border-bottom">
+                                        <input type="text" class="form-control noShadow noBottomBorder" name="sex"
+                                            [(ngModel)]="user.sex" tabindex="1" placeholder="Gender" [max]="100"
+                                            required sex focus #eRef="ngModel">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div class="input-group border-bottom">
+                                        <input type="text" class="form-control noShadow noBottomBorder" name="birth"
+                                            [(ngModel)]="user.birth" tabindex="1" placeholder="Birth" [max]="100"
+                                            required birth focus #eRef="ngModel" mask="0000-00-00">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-12">
+                                    <div class="input-group border-bottom">
                                         <input type="text" class="form-control noShadow noBottomBorder" name="name"
                                             [(ngModel)]="user.name" tabindex="2" placeholder="Name" [max]="100">
                                     </div>

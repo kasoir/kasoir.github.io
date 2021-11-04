@@ -3,7 +3,7 @@ export const getnowDate = () => {
 	const month = dateObject.getMonth() + 1;
 	const day = dateObject.getDate();
 	const year = dateObject.getFullYear();
-	const date = year.toString() + month.toString() + day.toString()
+	const date = ( year * 10000 + month * 100 + day ).toString();
 	return date;
 };
 export const getnow = () => {

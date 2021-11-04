@@ -1,4 +1,3 @@
-// TODO ALI TO REVIEW
 import { Request, Response, NextFunction, RequestHandler } from 'express';
 import { body } from 'express-validator';
 import { StatusCodes as HttpStatus } from 'http-status-codes';

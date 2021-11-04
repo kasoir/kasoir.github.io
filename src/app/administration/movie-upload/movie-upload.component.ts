@@ -40,9 +40,9 @@ export class MovieUploadComponent implements OnInit {
       console.log('Error')
     }
     if (result) {
-      this.messageService.add({ summary: 'Success', sticky: false, life: 2000, detail: 'Updated successfully...' });
-      this.bsModalRef.hide();
     }
+    this.messageService.add({ summary: 'Success', sticky: false, life: 2000, detail: 'Updated successfully...' });
+    this.bsModalRef.hide();
   }
 
   async onSelectFile ( e: any ): Promise<void> {

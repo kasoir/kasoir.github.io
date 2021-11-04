@@ -33,7 +33,6 @@ app.use( ( error: HttpError, _req: Request, res: Response, _next: NextFunction )
 	const code = error.statusCode || StatusCodes.INTERNAL_SERVER_ERROR;
 	const message = code === StatusCodes.INTERNAL_SERVER_ERROR ? 'Server Error' : error.message;
 
-	// TODO ALI to handle not sending data if ENV=production
 	res.status( code ).json( {
 		code,
 		data: { errors: error.errors },

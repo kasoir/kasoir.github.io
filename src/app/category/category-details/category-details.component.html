@@ -1,1 +1,58 @@
-<p>category-details works!</p>
+<form *ngIf="done; else loading">
+    <div class="modal-header">
+        <div class="container-fluid">
+            <div class="row">
+                <h4 class="modal-title pull-left">Category {{category.description}}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body overflow-hidden">
+        <div class="row fields">
+            <div class="col-md-8">
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                Category Shortcut
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Shortcut" name="id"
+                                [(ngModel)]="category.id" [readonly]="!isAdmin">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Descritopn
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Descritopn" name="descritopn"
+                                [(ngModel)]="category.description" [readonly]="!isAdmin">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" (click)="bsModalRef.hide()" class="btn btn-sm btn-light ml-auto">Cancel</button>
+        <button (click)="update()" class="btn btn-sm btn-primary m_l_10" *ngIf="data && isAdmin">Update</button>
+        <button (click)="create()" class="btn btn-sm btn-primary m_l_10" *ngIf="!data && isAdmin">Create</button>
+    </div>
+</form>
+<ng-template #loading>
+    <div class="text-center m-5">
+        <div class="spinner-border	" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</ng-template>
+<ng-template #t let-fill="fill">
+    <span class="star" [class.full]="fill === 100">
+        <span class="half" [style.width.%]="fill">&starf;</span>&starf;
+    </span>
+</ng-template>

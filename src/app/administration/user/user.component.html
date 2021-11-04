@@ -9,7 +9,7 @@
             styleClass="p-datatable-gridlines p-datatable-striped" *ngIf="users; else loading" [rowHover]="true">
             <ng-template class="row" pTemplate="header">
                 <tr class="col-12 row pl-0 pr-0 ml-0 mr-0">
-                    <th class="col-1 pt-0 pb-0 text-center" pSortableColumn="id">
+                    <th class="col-2 pt-0 pb-0 text-center" pSortableColumn="id">
                         #<p-sortIcon field="id"></p-sortIcon>
                     </th>
                     <th class="col-2 pt-0 pb-0 text-center" pSortableColumn="name" p-columnFilter="name">
@@ -42,20 +42,16 @@
                         </p-columnFilter>
                         <p-sortIcon field="status"></p-sortIcon>
                     </th>
-                    <th class="col-1 pt-0 pb-0 text-center">Details</th>
                 </tr>
             </ng-template>
             <ng-template class="row" pTemplate="body" let-user let-i="rowIndex">
                 <tr class="row col-12 pl-0 pr-0 ml-0 mr-0">
-                    <td class="col-1 pt-0 pb-0 text-center">{{i + 1}}</td>
+                    <td class="col-2 pt-0 pb-0 text-center">{{i + 1}}</td>
                     <td class="col-2 pt-0 pb-0 text-center">{{user.name}}</td>
                     <td class="col-2 pt-0 pb-0 text-center">{{user.email}}</td>
                     <td class="col-2 pt-0 pb-0 text-center">{{user.isAdmin?'Yes':'No'}}</td>
                     <td class="col-2 pt-0 pb-0 text-center">{{user.isVerified?'Yes':'No'}}</td>
                     <td class="col-2 pt-0 pb-0 text-center">{{user.status}}</td>
-                    <td class="col-1 pt-0 pb-0 text-center">
-                        <a (click) = "userDetalis(user)"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i></a>
-                    </td>
                 </tr>
             </ng-template>
         </p-table>

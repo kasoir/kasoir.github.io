@@ -12,12 +12,15 @@ import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+import { MovieDownloadComponent } from './movie-download/movie-download.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 
 @NgModule({
   declarations: [
     MovieDetailsComponent,
+    MovieDownloadComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +35,7 @@ import { ToastModule } from 'primeng/toast';
     ButtonModule,
     RippleModule,
     ToastModule,
+    NgxMaskModule,
   ],
 	providers: [
 		MessageService,
