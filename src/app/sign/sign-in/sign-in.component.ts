@@ -39,7 +39,7 @@ export class SignInComponent implements OnInit {
 			this.isClicked = false;
 		} catch ( err ) {
 			this.isClicked = false;
-			this.messageService.add({ summary:'Error', sticky: false,life:2000, detail: err.error.error || 'Invalid email address or password' } );
+			this.messageService.add({ summary:'Error', sticky: false,life:2000, detail: err?.error?.error || 'Invalid email address or password' } );
 			this.authService.signOutUser();
 		}
   }
