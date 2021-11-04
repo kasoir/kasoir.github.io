@@ -1,0 +1,124 @@
+<!-- TODO ALI TO REVIEW -->
+<form #form="ngForm" (ngSubmit)="form.valid && downloadMovie(form)" *ngIf="done; else loading">
+    <div class="modal-header">
+        <div class="container-fluid">
+            <div class="row">
+                <h4 class="modal-title pull-left">Movie {{data.name}}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body overflow-hidden">
+        <div class="row fields">
+            <div class="col-md-8">
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Movie Name
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Name" name="name"
+                                [(ngModel)]="data.name" [readonly]="!isAdmin">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Category
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Category" name="category"
+                                [(ngModel)]="data.category" [readonly]="!isAdmin">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Year
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Year" name="year"
+                                [(ngModel)]="data.year" [readonly]="!isAdmin">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Director
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Director" name="director"
+                                [(ngModel)]="data.director" [readonly]="!isAdmin">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Price
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Price" name="price"
+                                [(ngModel)]="data.price" [readonly]="!isAdmin">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Description
+                                </div>
+                            </div>
+                            <textarea class="form-control col-9 border-0" placeholder="Description" name="description"
+                                [(ngModel)]="data.description" [readonly]="!isAdmin">
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="col-sm-12">
+                    <img [src]="data.coverImage" alt="Cover Image">
+                </div>
+                <div class="col-sm-12">
+                    <ngb-rating [max]="5" [(rate)]="data.rate" [starTemplate]="t" [readonly]="!isAdmin && !canRate">
+                    </ngb-rating>
+                    <!-- <button pButton (click)="submitRating()"></button> -->
+                    <button class="btn btn-sm btn-primary button-position" pButton pRipple type="button"
+                        (click)="submitRating()" [disabled]="!isAdmin && !canRate">Rate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" (click)="bsModalRef.hide()" class="btn btn-sm btn-light ml-auto">Cancel</button>
+        <button type="submit" class="btn btn-sm btn-primary m_l_10" *ngIf="!isAdmin">Download</button>
+        <button (click) = "update()" class="btn btn-sm btn-primary m_l_10" *ngIf="isAdmin">Update</button>
+    </div>
+</form>
+<ng-template #loading>
+    <div class="text-center m-5">
+        <div class="spinner-border	" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</ng-template>
+<ng-template #t let-fill="fill">
+    <span class="star" [class.full]="fill === 100">
+        <span class="half" [style.width.%]="fill">&starf;</span>&starf;
+    </span>
+</ng-template>

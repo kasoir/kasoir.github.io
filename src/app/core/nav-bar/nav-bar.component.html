@@ -1,0 +1,22 @@
+<!-- <p-menubar [model]="items" styleClass="d-flex justify-content-end">
+	<ng-template pTemplate="start">
+		<div class="p-menuitem p-py-2 p-px-3">
+			<img src="assets/images/movies-store-logo.png" alt="System Logo" height="25" routerLink="/">
+		</div>
+	</ng-template>
+</p-menubar> -->
+
+<!-- <p-menubar [model]="items">
+    <ng-template pTemplate="start">
+        <img src="assets/images/movies-store-logo.png" height="40" class="p-mr-2">
+    </ng-template>
+    <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search">
+    </ng-template>
+</p-menubar> -->
+<p-menubar [model]="items" *ngIf="showBar">
+    <ng-template pTemplate="start">
+        <img src="assets/images/movies-store-logo.png" height="20" class="p-mr-2">
+    </ng-template>
+</p-menubar>
+<button p-button class="btn btn-primary w-100" style="line-height: 0.5; border-radius: 0%;" (click)="showBar=!showBar" (mouseover)="showBar=!showBar"><i class="fa fa-arraw fa-fw" aria-hidden="true"></i></button>

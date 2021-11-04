@@ -1,0 +1,45 @@
+<div class="card border-0 border-rounded-0" style="width:100%;">
+    <div class="card-header row text-right">
+		<h4 class="float-left">Directors</h4>
+		<button type="button" class="btn btn-sm btn-primary ml-auto mr-3" (click)="addDirector()">Add Director</button>
+	</div>
+    <div class="card-body m-0 p-0">
+        <p-table [value]="directors" sortMode="multiple" [multiSortMeta]="[{field: 'id', order:1}]"
+            styleClass="p-datatable-gridlines p-datatable-striped" *ngIf="directors; else loading" [rowHover]="true">
+            <ng-template class="row" pTemplate="header">
+                <tr class="col-12 row pl-0 pr-0 ml-0 mr-0">
+                    <th class="col-3 pt-0 pb-0 text-center" pSortableColumn="id">
+                        #<p-sortIcon field="id"></p-sortIcon>
+                    </th>
+                    <th class="col-3 pt-0 pb-0 text-center" pSortableColumn="name" p-columnFilter="name">
+                        Name
+                        <p-columnFilter type="text" field="name" display="menu" [matchMode]="'contains'">
+                        </p-columnFilter>
+                        <p-sortIcon field="name"></p-sortIcon>
+                    </th>
+                    <th class="col-3 pt-0 pb-0 text-center" pSortableColumn="nationality" p-columnFilter="nationality">
+                        Nationality
+                        <p-columnFilter type="number" field="nationality" display="menu" [matchMode]="'contains'">
+                        </p-columnFilter>
+                        <p-sortIcon field="nationality"></p-sortIcon>
+                    </th>
+                    <th class="col-3 pt-0 pb-0 text-center">Details</th>
+                </tr>
+            </ng-template>
+            <ng-template class="row" pTemplate="body" let-director let-i="rowIndex">
+                <tr class="row col-12 pl-0 pr-0 ml-0 mr-0">
+                    <td class="col-3 pt-0 pb-0 text-center">{{i + 1}}</td>
+                    <td class="col-3 pt-0 pb-0">{{director.name}}</td>
+                    <td class="col-3 pt-0 pb-0">{{director.nationality}}</td>
+                    <td class="col-3 pt-0 pb-0 text-center">
+                        <a (click)="directorDetalis(director)"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+        <ng-template #loading>
+            <div class="alert alert-warning">Loading, please wait...</div>
+        </ng-template>
+    </div>
+</div>
+<p-toast position="bottom-right"></p-toast>

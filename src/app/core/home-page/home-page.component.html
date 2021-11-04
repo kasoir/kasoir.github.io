@@ -1,0 +1,16 @@
+<!-- TODO ALI TO REVIEW -->
+<div id="main-wrapper-id">
+
+    <ng-container>
+        <div class="custom-navbar-wrapper">
+            <div class="fixed-top">
+                <app-nav-bar>
+                </app-nav-bar>
+            </div>
+        </div>
+    </ng-container>
+    <div class="content-main" [@routerTransition]="getAnimationState(outlet)">
+		<router-outlet #outlet="outlet"></router-outlet>
+        <!--  -->
+    </div>
+</div>

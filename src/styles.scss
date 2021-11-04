@@ -1,0 +1,147 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "./variables";
+@import "~bootstrap/scss/bootstrap.scss";
+// @import "~ngx-bootstrap/datepicker/bs-datepicker.css";
+@import "~ngx-toastr/toastr-bs4-alert";
+@import "~jexcel/dist/jexcel.css";
+@import  "~font-awesome/scss/font-awesome.scss";
+
+// .dropdown.open .dropdown-menu { display: block; }
+// //* READ ME
+// //* Important
+// // for any component style customization follow the steps:
+// // 1- provide the page with unique ID
+// // 2- open scope for this ID in style.scss file -this file-
+// // 3- provide the proper comment with 'custom' word as title before your scope, make it easy to find
+// // 4- and set all customization css classes inside this scope
+// // that makes your customizations only related to your page, without any impact on the other pages
+
+//** main page wraper ********************************************************
+html,
+body {
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-size: 12px;
+}
+
+.pointer {
+	cursor: pointer !important;
+}
+
+.full-screen-container {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+.input-group {
+	border: 0;
+	// border-bottom: 1px solid #dcdcdc;
+}
+
+.input-group-prepend .input-group-text {
+	border: 0;
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+	background-color: transparent !important;
+}
+
+.input-group-append .input-group-text {
+	border: 0;
+	padding-right: 0 !important;
+	margin-right: 0 !important;
+	background-color: transparent !important;
+}
+
+.input-group input {
+	border: 0 !important;
+	padding: 0 !important;
+	border-radius: 0 !important;
+	border-bottom: 1px solid #dcdcdc !important;
+}
+
+.input-group .custom-select {
+	border: 0 !important;
+	border-bottom: 1px solid #dcdcdc !important;
+}
+
+::placeholder {
+	color: #c6c6c6 !important;
+}
+
+h1 {
+	font-size: calc(33 / 14 * 1rem) !important;
+	font-weight: 500;
+}
+
+.breadcrumb-item {
+	font-size: calc(12 / 14 * 1rem);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+	content: ">";
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+tr th:nth-child(1) {
+	padding-left: 0;
+}
+
+tr td:nth-child(1) {
+	padding-left: 0;
+}
+
+thead.sticky-header th {
+	position: sticky;
+	background-color: $white;
+	top: 0;
+	margin-top: -1px;
+	z-index: 10;
+}
+
+th {
+	border-top: 0 !important;
+	border-bottom-width: 1px !important;
+}
+
+.mr-7 {
+	margin-right: 3.5rem !important;
+}
+
+.mr-10 {
+	margin-right: 5rem !important;
+}
+
+.mt-10 {
+	margin-top: 5rem !important;
+}
+
+.mt-15 {
+	margin-top: 9rem !important;
+}
+
+.pl-10 {
+	padding-left: 6rem !important;
+}
+.modal-body { max-height: calc(100vh - 175px); overflow: auto; }
+
+.size-v {
+	font-size: calc(14 / 12 * 1rem);
+}
+
+p-table,p-treeTable td,th {
+	font-size: calc(11 / 12 * 1rem);
+	padding: 0 calc(1rem / 4) !important;
+}

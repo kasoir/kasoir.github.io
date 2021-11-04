@@ -1,0 +1,24 @@
+<div style="margin: 7% 0 0 0;">
+    <p-carousel [value]="movies" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
+        [autoplayInterval]="5000" [responsiveOptions]="responsiveOptions">
+        <ng-template pTemplate="header">
+            <h4 class="card-header" style="margin-bottom: 50px;">Recently Added Movies</h4>
+        </ng-template>
+        <ng-template let-movie pTemplate="item">
+            <div class="product-item">
+                <div class="product-item-content">
+                    <div class="p-mb-3">
+                    </div>
+                    <div (click) = "openMovieDetails(movie)"> 
+                        <h4 class="p-mb-1">{{movie.name}}</h4>
+                        <img [src]="movie.coverImage" alt="Cover Image">
+                        <h6 class="p-mt-0 p-mb-3">${{movie.price}}</h6>
+                        <div class="car-buttons p-mt-5">
+                            <h6>{{movie.rate}}</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </p-carousel>
+</div>

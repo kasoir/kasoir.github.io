@@ -1,0 +1,24 @@
+.button-position {
+    position: absolute;
+    top: 87px;
+    left: 175px;
+}
+ngb-rating {
+    font-size: 100px;
+    color:rgb(255, 166, 0);
+  }
+  .star {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    color: #fd9e30;
+  }
+  .full {
+    color: rgb(253, 253, 6);
+  }
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    color: #d0fd09fa;
+  }

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="161.094" viewBox="0 0 160 161.094">
+  <g id="Group_3292" data-name="Group 3292" transform="translate(-67 -34.36)">
+    <rect id="Rectangle_600" data-name="Rectangle 600" width="160" height="160" transform="translate(67 34.36)" fill="#fff" opacity="0"/>
+    <g id="XMLID_181_" transform="translate(65.284 34.36)">
+      <path id="XMLID_424_" d="M1.716,0H123.154V161.094H1.716Z" fill="#4d777c"/>
+      <path id="XMLID_52_" d="M192.238,274.636h42.978V284.2H192.238Z" transform="translate(-139.513 -187.11)" fill="#396267"/>
+      <path id="XMLID_411_" d="M161.769,356.276h42.815v9.561H161.769Z" transform="translate(-109.044 -242.732)" fill="#396267"/>
+      <path id="XMLID_44_" d="M192.238,356.276h33.1v9.561h-33.1Z" transform="translate(-129.803 -242.732)" fill="#396267"/>
+      <path id="XMLID_3750_" d="M89.829,119.31a4.78,4.78,0,1,0-4.78-4.78A4.834,4.834,0,0,0,89.829,119.31Z" transform="translate(-56.772 -74.772)" fill="#ececec"/>
+      <path id="XMLID_3743_" d="M89.829,202.557a4.78,4.78,0,1,0-4.78-4.78A4.834,4.834,0,0,0,89.829,202.557Z" transform="translate(-56.772 -131.489)" fill="#ececec"/>
+      <path id="XMLID_3160_" d="M89.829,285.8a4.78,4.78,0,1,0-4.78-4.78A4.834,4.834,0,0,0,89.829,285.8Z" transform="translate(-56.772 -188.204)" fill="#ececec"/>
+      <path id="XMLID_3155_" d="M89.829,369.05a4.78,4.78,0,1,0-4.78-4.78A4.834,4.834,0,0,0,89.829,369.05Z" transform="translate(-56.772 -244.921)" fill="#ececec"/>
+      <circle id="XMLID_4457_" cx="30.295" cy="30.295" r="30.295" transform="translate(93.173 86.85)" fill="#6cc8c5"/>
+      <path id="XMLID_55_" d="M192.238,193h42.978v9.561H192.238Z" transform="translate(-139.513 -131.489)" fill="#396267"/>
+      <path id="XMLID_213_" d="M192.238,111.355h42.978v9.561H192.238Z" transform="translate(-139.513 -75.866)" fill="#396267"/>
+      <path id="Icon_awesome-info" data-name="Icon awesome-info" d="M1.175,24.931H2.351V16.441H1.175A1.175,1.175,0,0,1,0,15.266V12.459a1.175,1.175,0,0,1,1.175-1.175H7.757a1.175,1.175,0,0,1,1.175,1.175V24.931h1.175a1.175,1.175,0,0,1,1.175,1.175v2.807a1.175,1.175,0,0,1-1.175,1.175H1.175A1.175,1.175,0,0,1,0,28.913V26.106A1.175,1.175,0,0,1,1.175,24.931ZM5.642,0A4.231,4.231,0,1,0,9.873,4.231,4.231,4.231,0,0,0,5.642,0Z" transform="translate(118.281 102.1)" fill="#ececec"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,111 @@
+<!-- TODO ALI TO REVIEW -->
+<form *ngIf="done; else loading">
+    <div class="modal-header">
+        <div class="container-fluid">
+            <div class="row">
+                <h4 class="modal-title pull-left">Actor {{actor.name}}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body overflow-hidden">
+        <div class="row fields">
+            <div class="col-md-8">
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Actor Name
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Name" name="name"
+                                [(ngModel)]="actor.name" [readonly]="!isAdmin">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Age
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Age" name="age"
+                                [(ngModel)]="actor.age" [readonly]="!isAdmin">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Birth
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Birth" name="birth"
+                                [(ngModel)]="actor.birth" [readonly]="!isAdmin" mask="0000-00-00">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Movies
+                                </div>
+                            </div>
+                            <!-- <textarea class="form-control col-9 border-0" placeholder="Movies" name="movies"
+                                [(ngModel)]="actor.movies" [readonly]="!isAdmin"></textarea> -->
+
+                            <p-dropdown [filter]="true" [baseZIndex]="1500" appendTo="body" class="p-dropdown"
+                                name="movies" [options]="moviesNames" placeholder="Movies" [(ngModel)]="checkedMovie"
+                                optionLabel="name" optionValue="code" autoWidth="false" [style]="{'width':'200px'}"
+                                (onChange)="selectMovie()" [readonly]="!isAdmin">
+                            </p-dropdown>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="col-sm-12">
+                    <table class="table table-sm table-borderless" *ngIf="actor.movies.length!=0">
+                        <tr>
+                            <th>Movie Name</th>
+                            <th *ngIf="isAdmin">Delete</th>
+                        </tr>
+                        <tr *ngFor="let movie of actor.movies; let i = index;">
+                            <td class="m-0 px-1 py-0">
+                                {{movie.name}}
+                            </td>
+                            <td class="m-0 px-1 py-0">
+                                <button class="buttonColor p-button-outlined" icon="pi pi-trash" pButton pRipple
+                                    type="button" (click)="movieDelete(i)" *ngIf="isAdmin">
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" (click)="bsModalRef.hide()" class="btn btn-sm btn-light ml-auto">Cancel</button>
+        <button (click)="update()" class="btn btn-sm btn-primary m_l_10" *ngIf="data && isAdmin">Update</button>
+        <button (click)="create()" class="btn btn-sm btn-primary m_l_10" *ngIf="!data && isAdmin">Create</button>
+    </div>
+</form>
+<ng-template #loading>
+    <div class="text-center m-5">
+        <div class="spinner-border	" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</ng-template>
+<ng-template #t let-fill="fill">
+    <span class="star" [class.full]="fill === 100">
+        <span class="half" [style.width.%]="fill">&starf;</span>&starf;
+    </span>
+</ng-template>

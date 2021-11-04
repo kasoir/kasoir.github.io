@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <g id="Group_3273" data-name="Group 3273" transform="translate(0 0)">
+    <rect id="Rectangle_600" data-name="Rectangle 600" width="160" height="160" fill="#fff" opacity="0"/>
+    <g id="wishlist" transform="translate(13 -0.112)">
+      <g id="Group_3502" data-name="Group 3502" transform="translate(0 0.112)">
+        <path id="Path_2005" data-name="Path 2005" d="M10.912.112A10.924,10.924,0,0,0,0,11.024V148.83a10.924,10.924,0,0,0,10.912,10.912h46.33l7.795-79.815L57.242.112Z" transform="translate(0 -0.112)" fill="#4d777c"/>
+      </g>
+      <g id="Group_3503" data-name="Group 3503" transform="translate(57.242 0.112)">
+        <path id="Path_2006" data-name="Path 2006" d="M229.847.112h-46.33v159.63h46.33a10.924,10.924,0,0,0,10.912-10.912V11.024A10.924,10.924,0,0,0,229.847.112Z" transform="translate(-183.517 -0.112)" fill="#4d777c"/>
+      </g>
+      <g id="Group_3504" data-name="Group 3504" transform="translate(22.531 33.784)">
+        <path id="Path_2009" data-name="Path 2009" d="M106.943,108.063l2.928,4.833-2.928,4.521H76.91a4.677,4.677,0,0,1,0-9.353Z" transform="translate(-72.233 -108.063)" fill="#ececec"/>
+        <path id="Path_2010" data-name="Path 2010" d="M106.943,196.693l2.148,4.78-2.148,4.574H76.91a4.677,4.677,0,1,1,0-9.353Z" transform="translate(-72.233 -169.048)" fill="#ececec"/>
+        <path id="Path_2011" data-name="Path 2011" d="M76.912,294.669H96.169a4.677,4.677,0,1,0,0-9.353H76.912a4.677,4.677,0,0,0,0,9.353Z" transform="translate(-72.234 -230.027)" fill="#ececec"/>
+        <path id="Path_2012" data-name="Path 2012" d="M102.233,373.943H76.912a4.677,4.677,0,0,0,0,9.353h25.322a4.677,4.677,0,1,0,0-9.353Z" transform="translate(-72.234 -291.01)" fill="#ececec"/>
+      </g>
+      <path id="Path_2013" data-name="Path 2013" d="M218.226,112.74a4.678,4.678,0,0,1-4.677,4.677H183.513v-9.353H213.55A4.678,4.678,0,0,1,218.226,112.74Z" transform="translate(-126.272 -74.279)" fill="#ececec"/>
+      <path id="Path_2014" data-name="Path 2014" d="M194.562,201.37a4.678,4.678,0,0,1-4.677,4.677h-6.373v-9.353h6.373A4.676,4.676,0,0,1,194.562,201.37Z" transform="translate(-126.272 -135.264)" fill="#ececec"/>
+      <path id="Icon_awesome-arrow-left" data-name="Icon awesome-arrow-left" d="M37.379,61.788,34.157,65.01a3.469,3.469,0,0,1-4.921,0L1.02,36.808a3.469,3.469,0,0,1,0-4.921L29.237,3.671a3.469,3.469,0,0,1,4.921,0l3.222,3.222a3.487,3.487,0,0,1-.058,4.979L19.831,28.535H61.547a3.475,3.475,0,0,1,3.484,3.484v4.645a3.475,3.475,0,0,1-3.484,3.484H19.831l17.49,16.663A3.462,3.462,0,0,1,37.379,61.788Z" transform="translate(68.769 71.21)" fill="#6cc8c5"/>
+    </g>
+  </g>
+</svg>

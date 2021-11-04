@@ -1,0 +1,114 @@
+
+<div *ngIf="done; else loading" class="full-screen-container d-flex">
+	<div class="content my-auto h-100">
+		<div class="container-fluid my-auto parentGroup">
+			<div class="row childGroup">
+				<div class="col-md-7 col-lg-5 mx-auto text-left">
+					<form #form="ngForm">
+						<div class="container-fluid my-5 border shadow-sm bg-white rounded px-5 pb-4">
+							<div class="row py-4 mt-5 mb-3">
+								<div class="col">
+									<h4 class="text-dark font-weight-bold">
+										Sign in to your account
+									</h4>
+								</div>
+							</div>
+							<div class="row mt-2">
+								<div class="col-12">
+									<div class="input-group border-bottom">
+										<input type="email" class="form-control noShadow noBottomBorder" name="email" [(ngModel)]="user.email"
+											tabindex="1" placeholder="Email" [max]="100" required email focus #eRef="ngModel">
+										<div class="input-group-append">
+											<img src="assets/icons/email-light.svg" width="20rem">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-0 mb-2">
+								<div class="col text-right text-danger">
+									<span *ngIf="eRef.touched && eRef.dirty && eRef.errors?.required">
+										Field is required
+									</span>
+									<span *ngIf="eRef.touched && eRef.dirty && eRef.errors?.email && !eRef.errors?.required">
+										The email format is invalid
+									</span>
+									<span *ngIf="eRef.touched && eRef.dirty && eRef.errors?.minlength && !eRef.errors?.required">
+										Must be at least {{ eRef.errors?.minlength?.requiredLength}} characters
+									</span>
+									<span *ngIf="eRef.touched && eRef.dirty && eRef.errors?.maxlength && !eRef.errors?.required">
+										Must be less than {{eRef.errors?.maxlength?.requiredLength}} characters
+									</span>
+								</div>
+							</div>
+							<div class="row mt-4">
+								<div class="col">
+									<div class="input-group border-bottom">
+										<input socientaAutoFocus [type]="fieldTextType ? 'text' : 'password'"
+											class="form-control rounded-0 border-0 noBottomBorder" name="passwordField" placeholder="Password"
+											tabindex="2" [(ngModel)]="user.password" required min="5" max="65" maxlength="65" minlength="3" #pRef="ngModel">
+										<div class="input-group-append">
+											<img src="assets/icons/Icon feather-eye.svg" width="20rem" id="togglePassword"
+												(click)="passwordEye()">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row mb-4">
+								<div class="col text-right text-danger">
+									<span *ngIf="pRef.touched && pRef.dirty && pRef.errors?.required">
+										Field is required
+									</span>
+									<span *ngIf="pRef.touched && pRef.dirty && pRef.errors?.minlength && !pRef.errors?.required">
+										Must be at least {{pRef.errors?.minlength?.requiredLength }} characters
+									</span>
+									<span *ngIf="pRef.touched && pRef.dirty && pRef.errors?.maxlength && !pRef.errors?.required">
+										Must be less than {{pRef.errors?.maxlength?.requiredLength}} characters
+									</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col text-right">
+									<a routerLink="/forgot-password/{{user.email}}" tabindex="3">
+										<label class="font-weight-semibold">Forgot password?</label>
+									</a>
+								</div>
+							</div>
+							<div class="row my-4 pb-5">
+								<!-- <div class="col-12 col-md-6 pr-2 my-2">
+									<button class="btn btn-block btn-outline-primary my-1 w-100 mx-1 px-1" type="button"
+										(click)="signInWithGoogle()" tabindex="4" [disabled] = "isClicked"><label class="font-weight-bold my-0">
+											<i class="fa fa-google" aria-hidden="true"></i>&nbsp;&nbsp;
+											Google</label>
+									</button>
+								</div> -->
+								<div class="col-12 col-md-12 pl-2 my-2">
+									<button class="btn btn-block btn-primary my-1 w-100 mx-1 px-1" type="submit" tabindex="5"
+										(click)="doLogin()">
+										<label class="font-weight-bold my-0">Sign In</label>
+									</button>
+								</div>
+							</div>
+							<div class="row mb-3 pt-3">
+								<div class="col text-center">
+									<label class="text-dark font-weight-semibold">Don't have an account?&nbsp;</label>
+									<a routerLink='/signUp' class="text-primary font-weight-bold">
+										<u class="pl-1">Sign Up</u>
+									</a>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ng-template #loading>
+	<div class="text-center m-5">
+		<p>Processing...</p>
+		<div class="spinner-border	" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+</ng-template>

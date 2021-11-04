@@ -1,0 +1,133 @@
+<form #form="ngForm" (ngSubmit)="form.valid && save(form)" *ngIf="done; else loading">
+    <div class="modal-header">
+        <div class="container-fluid">
+            <div class="row">
+                <h4 class="modal-title pull-left">Movie {{movie.name}}</h4>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body overflow-hidden">
+        <div class="row fields">
+            <div class="col-md-8">
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Movie Name
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Name" name="name"
+                                [(ngModel)]="movie.name">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Category
+                                </div>
+                            </div>
+
+                            <p-dropdown [filter]="true" [baseZIndex]="1500" appendTo="body" class="p-dropdown"
+                                name="movies" [options]="categories" placeholder="Category" [(ngModel)]="movie.category"
+                                optionLabel="description" optionValue="description" autoWidth="false" [style]="{'width':'200px'}">
+                            </p-dropdown>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Year
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Year" name="year"
+                                [(ngModel)]="movie.year">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Director
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Director" name="director"
+                                [(ngModel)]="movie.director">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Price
+                                </div>
+                            </div>
+                            <input class="form-control col-9 border-0" placeholder="Price" name="price"
+                                [(ngModel)]="movie.price">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <div class="form-group">
+                        <div class="input-group input-group-sm row">
+                            <div class="input-group-prepend col-4">
+                                <div class="input-group-text">
+                                    Description
+                                </div>
+                            </div>
+                            <textarea class="form-control col-9 border-0" placeholder="Description" name="description"
+                                [(ngModel)]="movie.description">
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="button" pButton icon="pi pi-file" class="float-right p-button-primary" label="Browse"
+                    (click)="files.click()"></button>
+                <input type="file" class="form-control" name="fileSelect" (change)="onSelectFile($event)"
+                    id="customFile" required #files hidden multiple>
+
+                <p-table [value]="fileList" class="table table-hover">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th class="pl-2 p-0 label-style-med">Name</th>
+                            <th class="pl-2 p-0 label-style-med"></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-file let-i="rowIndex">
+                        <tr>
+                            <td class="pl-1 pr-1 py-auto my-auto">{{file.name}}</td>
+                            <td class="pl-1 pr-1 py-auto my-auto"><button type="button" (click)="onDeleteDocument(i)"
+                                    class="btn btn-sm btn-outline-none">
+                                    <i class="fa fa-trash text-dark icon-style mt-1 mr-1" style="color: #3f3d56;"
+                                        aria-hidden="true" (onclick)="onDeleteDocument(i)"></i>
+                                </button></td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" (click)="bsModalRef.hide()" class="btn btn-sm btn-light ml-auto">Cancel</button>
+        <button type="submit" class="btn btn-sm btn-primary m_l_10">Upload</button>
+    </div>
+</form>
+<ng-template #loading>
+    <div class="text-center m-5">
+        <div class="spinner-border	" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</ng-template>

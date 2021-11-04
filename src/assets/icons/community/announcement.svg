@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160.5" viewBox="0 0 160 160.5">
+  <g id="Group_3293" data-name="Group 3293" transform="translate(-67 -35.36)">
+    <rect id="Rectangle_600" data-name="Rectangle 600" width="160" height="160" transform="translate(67 35.36)" fill="#fff" opacity="0"/>
+    <g id="chat_1_" data-name="chat (1)" transform="translate(67 35.86)">
+      <path id="Path_1728" data-name="Path 1728" d="M92.333,8V57.333a8.111,8.111,0,0,1-8,8H42L10.667,81.667V65.333H8a8.111,8.111,0,0,1-8-8V8A8.111,8.111,0,0,1,8,0H84.667A7.828,7.828,0,0,1,92.333,8Z" fill="#396267"/>
+      <g id="Group_3346" data-name="Group 3346" transform="translate(13 24)">
+        <circle id="Ellipse_71" data-name="Ellipse 71" cx="8.667" cy="8.667" r="8.667" fill="#fff"/>
+        <circle id="Ellipse_72" data-name="Ellipse 72" cx="8.667" cy="8.667" r="8.667" transform="translate(24.667)" fill="#fff"/>
+        <circle id="Ellipse_73" data-name="Ellipse 73" cx="8.667" cy="8.667" r="8.667" transform="translate(49.333)" fill="#fff"/>
+      </g>
+      <path id="Path_1729" data-name="Path 1729" d="M216.533,70.933v49a8.111,8.111,0,0,0,8,8H267.2l31.333,16.333V127.933h2.333a8.111,8.111,0,0,0,8-8v-49a8.111,8.111,0,0,0-8-8H224.2A7.828,7.828,0,0,0,216.533,70.933Z" transform="translate(-148.866 -43.266)" fill="#4d777c"/>
+      <g id="Group_3347" data-name="Group 3347" transform="translate(80.333 43.667)">
+        <circle id="Ellipse_74" data-name="Ellipse 74" cx="8.667" cy="8.667" r="8.667" transform="translate(49.333)" fill="#fff"/>
+        <circle id="Ellipse_75" data-name="Ellipse 75" cx="8.667" cy="8.667" r="8.667" transform="translate(24.667)" fill="#fff"/>
+        <circle id="Ellipse_76" data-name="Ellipse 76" cx="8.667" cy="8.667" r="8.667" fill="#fff"/>
+      </g>
+      <path id="Path_1730" data-name="Path 1730" d="M168.066,259.733v49.333a8.111,8.111,0,0,1-8,8H133.733l-12,16-12-16.333h-26a8.111,8.111,0,0,1-8-8v-49a8.111,8.111,0,0,1,8-8H160.4A7.828,7.828,0,0,1,168.066,259.733Z" transform="translate(-52.066 -173.066)" fill="#6cc8c5"/>
+      <g id="Group_3348" data-name="Group 3348" transform="translate(36.667 102.667)">
+        <circle id="Ellipse_77" data-name="Ellipse 77" cx="8.667" cy="8.667" r="8.667" transform="translate(49)" fill="#fff"/>
+        <circle id="Ellipse_78" data-name="Ellipse 78" cx="8.667" cy="8.667" r="8.667" transform="translate(24.667)" fill="#fff"/>
+        <circle id="Ellipse_79" data-name="Ellipse 79" cx="8.667" cy="8.667" r="8.667" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

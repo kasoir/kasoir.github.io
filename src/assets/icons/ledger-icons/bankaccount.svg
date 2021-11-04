@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="309" height="309" viewBox="0 0 309 309">
+  <defs>
+    <filter id="Rectangle_495" x="0" y="0" width="309" height="309" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3067" data-name="Group 3067" transform="translate(-1278 -226)">
+    <g transform="matrix(1, 0, 0, 1, 1278, 226)" filter="url(#Rectangle_495)">
+      <rect id="Rectangle_495-2" data-name="Rectangle 495" width="291" height="291" transform="translate(9 7)" fill="#fff" opacity="0"/>
+    </g>
+    <g id="noun_bank_account_1752772" data-name="noun_bank account_1752772" transform="translate(1292.748 231)">
+      <path id="Path_1117" data-name="Path 1117" d="M60.8,43.1h9.7A19.457,19.457,0,0,0,51.1,23.7V14H41.4v9.7a19.4,19.4,0,0,0,0,38.8V81.9a9.729,9.729,0,0,1-9.7-9.7H22A19.457,19.457,0,0,0,41.4,91.6v9.7h9.7V91.6a19.4,19.4,0,0,0,0-38.8V33.4A9.729,9.729,0,0,1,60.8,43.1ZM41.4,52.8a9.7,9.7,0,1,1,0-19.4ZM60.8,72.2a9.729,9.729,0,0,1-9.7,9.7V62.5A9.729,9.729,0,0,1,60.8,72.2Z" transform="translate(68.852 46.2)" fill="#4d777c"/>
+      <path id="Path_1118" data-name="Path 1118" d="M116.45,46H67.95A33.741,33.741,0,0,0,34,79.95V123.6H150.4V79.95A33.741,33.741,0,0,0,116.45,46Zm24.25,67.9h-97V79.95A24.014,24.014,0,0,1,67.95,55.7h48.5A24.014,24.014,0,0,1,140.7,79.95Z" transform="translate(115.052 169.4)" fill="#4d777c"/>
+      <path id="Path_1119" data-name="Path 1119" d="M83.6,244.5H54.5V50.5H161.2V151.865a41.725,41.725,0,0,1,9.7-12.61V50.5h9.7V21.4H98.15V2H44.8V21.4H35.1V50.5h9.7v194H25.4v19.4H6V293H132.1v-9.7H15.7v-9.7H132.1v-9.7h-97v-9.7h97V186.3H83.6ZM54.5,11.7H88.45v9.7H54.5ZM44.8,31.1H170.9v9.7H44.8ZM112.7,196h9.7v48.5h-9.7Zm-19.4,0H103v48.5H93.3Z" transform="translate(7.252)" fill="#4d777c"/>
+      <path id="Path_1120" data-name="Path 1120" d="M39,63.95A33.95,33.95,0,1,0,72.95,30,33.741,33.741,0,0,0,39,63.95ZM72.95,39.7A24.25,24.25,0,1,1,48.7,63.95,24.014,24.014,0,0,1,72.95,39.7Z" transform="translate(134.302 107.8)" fill="#4d777c"/>
+    </g>
+  </g>
+</svg>
