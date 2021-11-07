@@ -5,6 +5,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { MoviesService } from '../movies.service';
 import { MessageService } from 'primeng/api';
 import { MovieDownloadComponent } from '../movie-download/movie-download.component';
+import { AuthService } from 'src/app/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movie-details',
@@ -23,6 +25,8 @@ export class MovieDetailsComponent implements OnInit {
     private movieService: MoviesService,
     private messageService: MessageService,
     private modalService: BsModalService,
+    private authService: AuthService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -48,10 +52,15 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   downloadMovie = async (form: NgForm) => {
-    const initialState = {
-			movie: this.data
-		};
-		this.modalService.show( MovieDownloadComponent, { class: 'modal-xl', backdrop: 'static', keyboard: true, initialState } );
-    this.bsModalRef.hide();
+    if (!this.authService.user.isAdmin) {
+      this.bsModalRef.hide();
+      this.router.navigateByUrl('/signIn');
+    } else {
+      const initialState = {
+        movie: this.data
+      };
+      this.modalService.show(MovieDownloadComponent, { class: 'modal-xl', backdrop: 'static', keyboard: true, initialState });
+      this.bsModalRef.hide();
+    }
   }
 }
