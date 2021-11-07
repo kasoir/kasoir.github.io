@@ -1,5 +1,5 @@
 export const apiPort = 4006;
-export const apiURL = 'http://localhost:' + apiPort;
+export const apiURL = 'http://immense-gorge-86664.herokuapp.com';
 export const webClientHost = 'http://localhost:4200';
 export const MAX_API_CALL_RETRIES = 1;
 export const VerificationEmailPeriod = 3;

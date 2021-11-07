@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <g id="Group_3277" data-name="Group 3277" transform="translate(-65 -35.36)">
+    <rect id="Rectangle_600" data-name="Rectangle 600" width="160" height="160" transform="translate(65 35.36)" fill="#fff" opacity="0"/>
+    <g id="cash-payment" transform="translate(9.9 11.657)">
+      <path id="Path_1505" data-name="Path 1505" d="M187.837,178.035l-11.374,3.56-9.828,3.075H115.019l-10.03-32.047L72,47.22l32.988-10.326L140.21,25.87,176.463,141.7Z" transform="translate(0 -1.227)" fill="#396267"/>
+      <path id="Path_1506" data-name="Path 1506" d="M194.748,196.443l2.463,7.87-31.482,9.854-2.463-7.871-7.87,2.463L119.266,93.325l7.87-2.463-2.463-7.871,31.482-9.853,2.463,7.87,7.87-2.463L202.619,193.98Z" transform="translate(-31.024 -32.253)" fill="#4d777c"/>
+      <path id="Path_1507" data-name="Path 1507" d="M168,24h71.474V183.443H168Z" transform="translate(-63.012)" fill="#396267"/>
+      <path id="Path_1508" data-name="Path 1508" d="M241.235,185.2v8.247H208.247V185.2H200V64.247h8.247V56h32.988v8.247h8.247V185.2Z" transform="translate(-84.016 -21.004)" fill="#4d777c"/>
+      <circle id="Ellipse_67" data-name="Ellipse 67" cx="14" cy="14" r="14" transform="translate(127.1 90.343)" fill="#6cc8c5"/>
+      <path id="Path_1509" data-name="Path 1509" d="M313.17,211.984v65.976H293.927a27.49,27.49,0,0,1-27.49-27.49h.055l-17.834-26.392a11,11,0,1,1,18.223-12.312l16.051,22.21h8.247V168l20.7,38.81a11,11,0,0,1,1.294,5.175Z" transform="translate(-114.716 -94.518)" fill="#ececec"/>
+    </g>
+  </g>
+</svg>

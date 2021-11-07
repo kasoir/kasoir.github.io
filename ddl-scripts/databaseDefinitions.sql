@@ -1,4 +1,3 @@
-\i 0000000-uuid_generate_v1.sql
 \i 0001000-getFieldType.sql
 \i 0002000-checkPrimaryKey.sql
 \i 0002500-ensureTextFieldinTable.sql

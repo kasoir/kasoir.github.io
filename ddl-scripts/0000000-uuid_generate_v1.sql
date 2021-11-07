@@ -1,6 +1,6 @@
 CREATE OR REPLACE FUNCTION public.uuid_generate_v1()
     RETURNS uuid
-    LANGUAGE 'c'
+    LANGUAGE 'plpgsql'
     VOLATILE STRICT
     PARALLEL SAFE
     COST 1
