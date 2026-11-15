@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasoir Abbas — Senior Software Engineer</title>
+  <meta name="description" content="Senior Software Engineer with 7+ years of experience building scalable web applications, distributed backend systems, payment platforms, and hardware-integrated solutions." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Mermaid.js v11 CDN for System Architecture Diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+
+  <!-- Custom Theme & Portfolio Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-teal-800/15 selection:text-teal-950">
+
+  <div>
+    <!-- Sticky Glassmorphic Top Navigation Header -->
+    <header class="sticky top-0 z-40 surface-glass">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+        <!-- Brand Identity -->
+        <a href="#about" class="flex items-center gap-3 group shrink-0">
+          <img src="assets/profile.jpg" alt="Kasoir Abbas" class="w-9 h-9 rounded-full object-cover object-top border border-[var(--border-strong)] shrink-0" />
+          <div class="whitespace-nowrap">
+            <span class="font-bold text-base tracking-tight text-ink-primary block leading-none">Kasoir Abbas</span>
+            <span class="text-[11px] text-ink-muted block mt-0.5">Senior Software Engineer &middot; Dubai</span>
+          </div>
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-ink-secondary whitespace-nowrap">
+          <a href="#about" class="hover:text-accent transition-colors">Overview</a>
+          <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
+          <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+          <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+          <a href="#education" class="hover:text-accent transition-colors">Education &amp; Awards</a>
+        </nav>
+
+        <!-- Header Right CTA -->
+        <div class="flex items-center gap-2 shrink-0 whitespace-nowrap">
+          <a href="#contact" class="btn-secondary px-3.5 py-2 rounded-xl text-xs font-semibold hidden sm:inline-flex items-center gap-1.5">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-accent"></i>
+            <span>Contact</span>
+          </a>
+          <a href="assets/Kasoir_Abbas_CV.pdf" target="_blank" download="Kasoir_Abbas_CV.pdf" class="bg-accent-primary px-3.5 py-2 rounded-xl text-xs font-semibold inline-flex items-center gap-1.5 shadow-xs">
+            <i data-lucide="file-down" class="w-3.5 h-3.5"></i>
+            <span>Download CV</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Portfolio Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 space-y-20">
+
+      <!-- SECTION 1: Hero, Cover & Summary -->
+      <section id="about" class="scroll-mt-24">
+        <div id="hero-step-container"></div>
+      </section>
+
+      <!-- SECTION 2: Professional Experience Timeline -->
+      <section id="experience" class="scroll-mt-24">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-mono-code uppercase tracking-widest text-accent font-semibold block mb-1">Career Progression</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-ink-primary tracking-tight">Professional Experience</h2>
+          </div>
+          <p class="text-xs sm:text-sm text-ink-muted font-mono-code">
+            7+ Years Building Enterprise Web, Distributed Backend &amp; Hardware Systems
+          </p>
+        </div>
+
+        <div id="experience-timeline" class="space-y-8"></div>
+      </section>
+
+      <!-- SECTION 3: Key Production Systems & Open-Source Projects -->
+      <section id="projects" class="scroll-mt-24">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+          <div>
+            <span class="text-xs font-mono-code uppercase tracking-widest text-accent font-semibold block mb-1">Production &amp; Open Source</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-ink-primary tracking-tight">Key Projects &amp; Systems Architecture</h2>
+          </div>
+
+          <!-- Search Input -->
+          <div class="w-full lg:w-72 relative">
+            <i data-lucide="search" class="w-4 h-4 text-ink-muted absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input
+              type="text"
+              id="project-search-input"
+              placeholder="Filter by tech (e.g. MAUI, Kafka, NestJS)..."
+              class="w-full pl-9 pr-4 py-2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-strong)] text-xs text-ink-primary placeholder:text-ink-muted focus:outline-none focus:border-[var(--accent-primary)] transition-colors"
+            />
+          </div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div id="project-filter-tabs" class="flex flex-wrap gap-2 mb-8"></div>
+
+        <!-- Projects Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </section>
+
+      <!-- SECTION 4: Technical Skills & Capabilities Matrix -->
+      <section id="skills" class="scroll-mt-24">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-mono-code uppercase tracking-widest text-accent font-semibold block mb-1">Technical Proficiency</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-ink-primary tracking-tight">Skills &amp; Engineering Stack</h2>
+          </div>
+          <p class="text-xs text-ink-muted">
+            Click any skill tag below to filter related projects above
+          </p>
+        </div>
+
+        <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      </section>
+
+      <!-- SECTION 5: Education, Certifications & Awards -->
+      <section id="education" class="scroll-mt-24">
+        <div class="mb-8">
+          <span class="text-xs font-mono-code uppercase tracking-widest text-accent font-semibold block mb-1">Academic &amp; Competitive Credentials</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-ink-primary tracking-tight">Education, Awards &amp; Certifications</h2>
+        </div>
+
+        <div id="education-awards-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-6"></div>
+      </section>
+
+      <!-- SECTION 6: Direct Contact & Resume Call-to-Action -->
+      <section id="contact" class="scroll-mt-24">
+        <div id="contact-section-container"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- System Architecture Inspector Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+    <div id="modal-backdrop" class="fixed inset-0 bg-stone-950/60 backdrop-blur-xs"></div>
+
+    <div class="min-h-screen px-4 text-center flex items-center justify-center p-4 sm:p-6">
+      <div class="inline-block w-full max-w-3xl surface-card-elevated rounded-3xl text-left overflow-hidden my-8 relative z-10">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-[var(--border-subtle)] surface-subtle">
+          <div class="flex items-center gap-2">
+            <i data-lucide="git-branch" class="w-4 h-4 text-accent"></i>
+            <span class="text-xs font-mono-code font-semibold text-ink-primary">System Architecture &amp; Topology Inspector</span>
+          </div>
+          <button id="modal-close-btn" class="p-1.5 rounded-lg hover:bg-[var(--bg-card)] text-ink-secondary hover:text-ink-primary transition-colors cursor-pointer">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <div id="modal-content" class="p-6 sm:p-8 max-h-[80vh] overflow-y-auto"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-[var(--border-subtle)] py-8 bg-[var(--bg-card)] text-xs text-ink-muted">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="assets/profile.jpg" alt="Kasoir Abbas" class="w-7 h-7 rounded-full object-cover object-top border border-[var(--border-strong)]" />
+        <span class="font-medium text-ink-primary">Kasoir Abbas &mdash; Senior Software Engineer (Dubai, UAE)</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="mailto:kasoirabbas.96@gmail.com" class="hover:text-accent transition-colors">kasoirabbas.96@gmail.com</a>
+        <span>&bull;</span>
+        <a href="tel:+971567323593" class="hover:text-accent transition-colors">(+971) 56 732 3593</a>
+        <span>&bull;</span>
+        <a href="https://www.linkedin.com/in/kasoir-abbas" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">LinkedIn</a>
+        <span>&bull;</span>
+        <a href="https://github.com/kasoir" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
